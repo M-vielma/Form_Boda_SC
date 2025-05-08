@@ -1,0 +1,157 @@
+/* Fix general para desbordamiento lateral */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ----- Estilos generales ----- */
+body {
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1em;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease;
+}
+
+/* ----- Títulos ----- */
+h1, h2 {
+  color: #624B3E;
+  margin-bottom: 1.5em;
+  font-size: 1.4em;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+p {
+  font-size: 1em;
+  color: #333;
+  margin-top: 1em;
+}
+
+/* ----- Inputs y botones ----- */
+input[type="text"] {
+  padding: 0.6em;
+  width: 90%;
+  max-width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+button,
+.boton-link {
+  background-color: #CBC3A6;
+  color: #fff;
+  border: none;
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  line-height: normal;
+  height: 42px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  vertical-align: middle;
+}
+
+.boton-link > span {
+  font-size: 1em;
+  line-height: 1;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+button:hover,
+.boton-link:hover {
+  background-color: #AD9B72;
+}
+
+
+
+button:hover,
+.boton-link:hover {
+  background-color: #AD9B72;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ----- Animaciones y estados ----- */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.oculto {
+  display: none;
+}
+
+/* ----- Responsive para móviles ----- */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5em;
+  }
+
+  button,
+  .boton-link {
+    width: 100%;
+    margin: 0.4em 0;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  h1, h2 {
+    font-size: 1.3em;
+  }
+}
+.logo-invitacion {
+  width: 100%;
+  max-width: 420px;
+
+  animation: float 2.5s ease-in-out infinite;
+}
+
+/* Animación flotante que usaba .tarjeta */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RSVP Confirmation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="invitacion-wrapper">
+    <!-- Welcome video with click -->
+    <video class="logo-invitacion fade-in" autoplay muted playsinline onclick="mostrarFormulario()">
+      <source src="video/logo.mp4" type="video/mp4">
+      Your browser does not support HTML5 videos.
+    </video>
+
+
+    <!-- Confirmation form, initially hidden -->
+    <div class="container oculto" id="contenedor-formulario">
+      <h1 id="titulo">Enter your invitation code</h1>
+      
+      <div id="form-codigo">
+        <input type="text" id="codigo" placeholder="e.g., ST220" />
+        <div>
+          <button onclick="validarCodigo()">Confirm</button>
+        </div>
+        <div>
+          <a href="https://maps.app.goo.gl/bLSyHJpT5XBwx9rP8" target="_blank" class="boton-link">
+            📍 Go to the ceremony
+          </a>
+        </div>
+      </div>
+
+      <h2 id="pregunta" class="oculto">Will you attend the wedding?</h2>
+      <div id="botones" class="oculto">
+        <button onclick="responder('si')">✅ Yes</button>
+        <button onclick="responder('no')">❌ No</button>
+      </div>
+
+      <p id="mensaje"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function mostrarFormulario() {
+      document.querySelector(".logo-invitacion").classList.add("oculto");
+      const form = document.getElementById("contenedor-formulario");
+      form.classList.remove("oculto");
+      form.classList.add("fade-in");
+    }
+  </script>
+</body>
+</html>
