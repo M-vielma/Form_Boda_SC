@@ -65,9 +65,9 @@ function responder(asistira) {
       const textoPase = pasesAdicionales === 1
         ? "You have a pass for 1 additional guest."
         : `You have a pass for ${pasesAdicionales} additional guests.`;
-      mensajeFinal = `${nombreInvitado}, thank you for confirming your attendance. ${textoPase} ✅`;
+      mensajeFinal = `${nombreInvitado},  thank you for confirming your attendance. We are excited to see you on our big day! ${textoPase} 💍❤️`;
     } else {
-      mensajeFinal = `${nombreInvitado}, thank you for confirming your attendance. We look forward to seeing you there! 💍❤️`;
+      mensajeFinal = `${nombreInvitado}, thank you for confirming your attendance. We are excited to see you on our big day! 💍❤️`;
     }
   } else {
     mensajeFinal = `${nombreInvitado}, thank you for letting us know. We are sorry you won’t be able to join us, but you will be in our hearts the same 💍❤️`;
